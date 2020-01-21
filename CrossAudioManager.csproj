@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.0;netstandard2.0;MonoAndroid80;Xamarin.iOS10;uap10.0.15063;Xamarin.TVOS10;Xamarin.WatchOS10;Xamarin.Mac20;</TargetFrameworks>
+<!--    <TargetFrameworks>netstandard1.0;netstandard2.0;MonoAndroid90;Xamarin.iOS10;uap10.0.15063;Xamarin.TVOS10;Xamarin.WatchOS10;Xamarin.Mac20;</TargetFrameworks>-->
+    <TargetFrameworks>netstandard1.0;netstandard2.0;MonoAndroid90;Xamarin.iOS10</TargetFrameworks>
     <AssemblyName>CrossAudioManager</AssemblyName>
     <RootNamespace>CrossAudioManager</RootNamespace>
     <PackageId>CrossAudioManager</PackageId>
@@ -36,7 +37,23 @@
     <Authors>Mike Gicking, Spencer Jameson</Authors>
     <Copyright>Copyright 2020</Copyright>
   </PropertyGroup>
+  
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DefineConstants>TRACE;PORTABLE;RELEASE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DefineConstants>TRACE;PORTABLE;DEBUG;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Mobile|AnyCPU' ">
+    <IntermediateOutputPath>obj\Mobile</IntermediateOutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Mobile</OutputPath>
+    <DefineConstants>TRACE;PORTABLE;RELEASE;</DefineConstants>
+    <DocumentationFile>..\obj\Release\netstandard2.0\MediaManager.xml</DocumentationFile>
+  </PropertyGroup>
 
+    
   <ItemGroup>
     <PackageReference Include="MSBuild.Sdk.Extras" Version="1.2.0" PrivateAssets="All" />
     <Compile Include="Shared\**\*.cs" />
@@ -49,12 +66,12 @@
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'uap10.0.15063' ">
+  <!--<ItemGroup Condition=" '$(TargetFramework)' == 'uap10.0.15063' ">
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="5.2.4" />
     <Compile Include="Platforms\UWP\**\*.cs" />
-  </ItemGroup>
+  </ItemGroup>-->
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'MonoAndroid80' ">
+  <ItemGroup Condition=" '$(TargetFramework)' == 'MonoAndroid90' ">
     <Compile Include="Platforms\Android\**\*.cs" />
   </ItemGroup>
 
@@ -77,9 +94,9 @@
     <Compile Include="Platforms\macOS\**\*.cs" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
+  <!--<ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">
     <Compile Include="Platforms\DotNet\**\*.cs" />
-  </ItemGroup>
+  </ItemGroup>-->
 
 
   <!--
