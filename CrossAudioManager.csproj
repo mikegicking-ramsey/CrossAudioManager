@@ -2,10 +2,9 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard1.0;netstandard2.0;MonoAndroid80;Xamarin.iOS10;uap10.0.15063;Xamarin.TVOS10;Xamarin.WatchOS10;Xamarin.Mac20;</TargetFrameworks>
-    <!--TODO: Fill these in-->
-    <AssemblyName>PLUGIN NAME GOES HERE</AssemblyName>
-    <RootNamespace>PLUGIN NAME GOES HERE</RootNamespace>
-    <PackageId>PLUGIN NAME GOES HERE</PackageId>
+    <AssemblyName>CrossAudioManager</AssemblyName>
+    <RootNamespace>CrossAudioManager</RootNamespace>
+    <PackageId>CrossAudioManager</PackageId>
     
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -24,7 +23,7 @@
     <!--TODO: Fill these in-->
     <PackageLicenseUrl>LINK TO LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>LINK TO PROJECT</PackageProjectUrl>
-    <RepositoryUrl>LINK TO PROJECT</RepositoryUrl>
+    <RepositoryUrl>https://github.com/mikegicking-ramsey/CrossAudioManager</RepositoryUrl>
     <PackageReleaseNotes>RELEASE NOTES</PackageReleaseNotes>
     <PackageIconUrl>ICON URL</PackageIconUrl>
     <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, $safeprojectname$</PackageTags>
@@ -33,22 +32,15 @@
     <Summary>Summary of nuget</Summary>
     <Description>Plugin Description</Description>
 
-    <Owners>YOU</Owners>
-    <Authors>YOU</Authors>
-    <Copyright>Copyright 2018</Copyright>
+    <Owners>Mike Gicking, Spencer Jameson</Owners>
+    <Authors>Mike Gicking, Spencer Jameson</Authors>
+    <Copyright>Copyright 2020</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="MSBuild.Sdk.Extras" Version="1.2.0" PrivateAssets="All" />
     <Compile Include="Shared\**\*.cs" />
     <Compile Include="Class1.cs" />
-    <Compile Include="Platforms\Android\CrossPluginImplementation.cs" />
-    <Compile Include="Platforms\DotNet\CrossPluginImplementation.cs" />
-    <Compile Include="Platforms\iOS\CrossPluginImplementation.cs" />
-    <Compile Include="Platforms\macOS\CrossPluginImplementation.cs" />
-    <Compile Include="Platforms\TVOS\CrossPluginImplementation.cs" />
-    <Compile Include="Platforms\UWP\CrossPluginImplementation.cs" />
-    <Compile Include="Platforms\WatchOS\CrossPluginImplementation.cs" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.0' ">

@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiPlatformTemplate", "MultiPlatformTemplate.csproj", "{D3C38B62-D71B-41C1-BE65-2C03BF2D087F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossAudioManager", "CrossAudioManager.csproj", "{D3C38B62-D71B-41C1-BE65-2C03BF2D087F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
