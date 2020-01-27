@@ -2,7 +2,7 @@
 
 namespace CrossAudioManager.Shared
 {
-    public class AudioManager
+    public class AudioManager : IAudioManager
     {
         public AudioManager()
         {

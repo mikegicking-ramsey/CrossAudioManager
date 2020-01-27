@@ -57,7 +57,8 @@
   <ItemGroup>
     <PackageReference Include="MSBuild.Sdk.Extras" Version="1.2.0" PrivateAssets="All" />
     <Compile Include="Shared\**\*.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="CrossAudioManager.cs" />
+    <Compile Include="IAudioManager.cs" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.0' ">
