@@ -1,9 +1,9 @@
 ﻿using System;
-using CrossAudioManager.Shared;
+using CrossAudioManager;
 
 namespace CrossAudioManager.Platforms.macOS
 {
-    public class AudioManagerImplementation : AudioManager
+    public class AudioManagerImplementation : AudioManagerBase
     {
         public AudioManagerImplementation()
         {

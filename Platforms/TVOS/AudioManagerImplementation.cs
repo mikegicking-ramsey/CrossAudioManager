@@ -1,9 +1,9 @@
 ﻿using System;
-using CrossAudioManager.Shared;
+using CrossAudioManager;
 
 namespace CrossAudioManager.Platforms.TVOS
 {
-    public class AudioManagerImplementation : AudioManager
+    public class AudioManagerImplementation : AudioManagerBase
     {
         public AudioManagerImplementation()
         {
